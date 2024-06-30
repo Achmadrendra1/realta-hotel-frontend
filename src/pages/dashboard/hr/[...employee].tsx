@@ -20,7 +20,7 @@ const EmployeeDetail = () => {
     const { details, deptHist, payHist } = useSelector((state:any) => state.detailEmpReducer)
     const { selectJob, selectDept } = useSelector((state:any) => state.selectReducer)
     const { employee } : any = router.query
-    const jobId = !parseInt(details?.jobname) ? selectJob.find((item:any) => item.label.toLocaleLowerCase() == details?.jobname?.toLocaleLowerCase()) : selectJob.find((item:any) => item.value == details?.jobname)
+    const jobId = !parseInt(details?.jobname) ? selectJob?.find((item:any) => item.label.toLocaleLowerCase() == details?.jobname?.toLocaleLowerCase()) : selectJob?.find((item:any) => item.value == details?.jobname)
     const [photos, setPhotos] = useState([])
     const [ update, setUpdate ] = useState({
         userId: '',

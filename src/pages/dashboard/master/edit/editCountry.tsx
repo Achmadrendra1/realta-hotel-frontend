@@ -9,7 +9,7 @@ export default function EditCountry(props: any) {
   const idCountry = props.idCountry;
   const dataCountry = props.dataCountry;
   const { handleClose } = props;
-  const details = dataCountry.find((item: any) => item.country_id == idCountry);
+  const details = dataCountry?.find((item: any) => item.country_id == idCountry);
   const [formValues, setFormValues] = useState(details);
 
   const handleInputChange = (input: any) => (e: any) => {

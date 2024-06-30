@@ -11,7 +11,7 @@ export default function EditVepros(props: any) {
     const { handleClose } = props
     const dispatch = useDispatch()
 
-    const editVepros = data.find((item: any) => item.vestock_id == id)
+    const editVepros = data?.find((item: any) => item.vestock_id == id)
     const [dataVepro, setDataVepro] = useState(editVepros)
 
     const eventHandler = (item: any) => (event: any) => {

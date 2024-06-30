@@ -33,7 +33,7 @@ export default function TopUp(props: any) {
   const [disBtn, setDisBtn] = useState(true);
   const [msg, setMsg] = useState("");
   const [finalForm, setFinalForm] = useState({
-    userId: dataUser[0]?.user_id,
+    userId: dataUser?.[0]?.user_id,
     amount: "",
     sourceNumber: "",
     targetNumber: props.phone,

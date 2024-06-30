@@ -20,7 +20,7 @@ export default function AddProduct() {
 
     const { vendors } = useSelector((state: any) => state.VendorReducer)
     const { id_vendor } = router.query
-    const data = vendors.find((item: any) => item.vendorId == id_vendor)
+    const data = vendors?.find((item: any) => item.vendorId == id_vendor)
 
     const dataVepro = vepros.filter((item: any) => item.vestock_vendor_id == data.vendorId)
     const dataTable = dataVepro.length > 0 ? dataVepro : []

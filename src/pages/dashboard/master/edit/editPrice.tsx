@@ -18,7 +18,7 @@ export default function EditPrice(props: any) {
   const idPrice = props.idPrice;
   const dataPrice = props.dataPrice;
   const { handleClose } = props;
-  const details = dataPrice.find((item: any) => item.pritId == idPrice);
+  const details = dataPrice?.find((item: any) => item.pritId == idPrice);
   const [formValues, setFormValues] = useState(details);
 
   const handleInputChange = (input: any) => (e: any) => {

@@ -13,7 +13,7 @@ export default function ActivationGoto(props: any) {
   const { handleCancell, dataUser, dataPaga } = props;
   const dispatch = useDispatch();
 
-  const pagaId = dataPaga?.filter((obj: any) => obj.pagaName === "GOTO")[0]
+  const pagaId = dataPaga?.filter((obj: any) => obj.pagaName === "GOTO")?.[0]
     ?.pagaEntityId;
 
   const [formValues, setFormValues] = useState({
@@ -24,7 +24,7 @@ export default function ActivationGoto(props: any) {
     usacExpyear: 0,
     usacSaldo: 0,
     usacSecureCode: "",
-    usacUserId: dataUser[0].user_id,
+    usacUserId: dataUser?.[0]?.user_id,
   });
 
   const handleChange = (index: number, event: any) => {

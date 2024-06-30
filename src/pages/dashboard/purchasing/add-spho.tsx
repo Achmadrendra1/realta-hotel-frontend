@@ -17,7 +17,7 @@ export default function AddSphos(props: any) {
 
     // const { sphos } = useSelector((state: any) => state.SphoReducer)
 
-    const editStocks = data.find((item: any) => item.stockId == id)
+    const editStocks = data?.find((item: any) => item.stockId == id)
     const [dataStock, setDataStock] = useState(editStocks)
 
     const eventHandler = (item: any) => (event: any) => {

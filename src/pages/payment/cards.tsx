@@ -160,7 +160,7 @@ export default function Cards() {
                       <div className="w-full px-8 absolute top-8">
                         <div className="flex justify-between">
                           <div className="">
-                            <p className="font-semiBold text-lg">{allBank.find((obj:any) => obj.bankEntityId == item.usacEntityId)?.bankName}</p>
+                            <p className="font-semiBold text-lg">{allBank?.find((obj:any) => obj.bankEntityId == item.usacEntityId)?.bankName}</p>
                           </div>
                           <p className="font-semibold text-lg">
                             {item.usacType}

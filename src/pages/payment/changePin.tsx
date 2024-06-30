@@ -13,9 +13,9 @@ export default function ChangePin(props: any) {
   const { handleCancell, dataUser, dataPaga } = props;
   const [msg, setMsg] = useState(null);
 
-  const pagaId = dataPaga?.filter((obj: any) => obj.pagaName === "H-Pay")[0]
+  const pagaId = dataPaga?.filter((obj: any) => obj.pagaName === "H-Pay")?.[0]
     ?.pagaEntityId;
-  const accNumber = `131${dataUser[0]?.user_phone_number}`;
+  const accNumber = `131${dataUser?.[0]?.user_phone_number}`;
 
   const [formValues, setFormValues] = useState({
     sourceNumber: accNumber,

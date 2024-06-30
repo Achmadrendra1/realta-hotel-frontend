@@ -8,7 +8,7 @@ export const workorderDetailReducer = ( state:any = initialState, action:any ) =
     const { payload, type } = action
     switch(type){
         case workType.UPDATE_WORK_DETAIL_SUCCESS:
-            const idx = state.data.findIndex((item:any) => item.wodeId == payload.wodeId)
+            const idx = state.data?.findIndex((item:any) => item.wodeId == payload.wodeId)
             state.data.splice(idx, 1, payload)
             return{
                 ...state,

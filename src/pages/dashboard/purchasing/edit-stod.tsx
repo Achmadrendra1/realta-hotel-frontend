@@ -16,7 +16,7 @@ export default function EditStods(props: any) {
         dispatch(getFacility())
     }, [])
 
-    const editStods = data.find((item: any) => item.stockdet_id == id)
+    const editStods = data?.find((item: any) => item.stockdet_id == id)
     const [dataStod, setDataStod] = useState(editStods)
 
     const status = [

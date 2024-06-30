@@ -10,7 +10,7 @@ export default function EditStocks(props: any) {
     const { handleClose } = props
     const dispatch = useDispatch()
 
-    const editStocks = data.find((item: any) => item.stockId == id)
+    const editStocks = data?.find((item: any) => item.stockId == id)
     const [dataStock, setDataStock] = useState(editStocks)
 
     const eventHandler = (item: any) => (event: any) => {
@@ -42,7 +42,7 @@ export default function EditStocks(props: any) {
                     initialValues={dataStock}
                 >
                     <p className='text-center text-xl py-5 font-bold'>
-                        Edit Stock {editStocks.stockName}
+                        Edit Stock {editStocks?.stockName}
                     </p>
 
                     <Form.Item

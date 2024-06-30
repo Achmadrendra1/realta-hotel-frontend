@@ -14,7 +14,7 @@ export default function AddCountry(props: any) {
   const regionNamee = props.regionNamee;
   const regionId = props.regionId;
   const dataLocationsRC = props.dataLocationsRC;
-  const details = dataLocationsRC.find(
+  const details = dataLocationsRC?.find(
     (item: any) => item.country_region_id == regionId
   );
   const [formValues, setFormValues] = useState(details);

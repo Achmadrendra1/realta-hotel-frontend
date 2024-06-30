@@ -9,7 +9,7 @@ export default function EditRegions(props: any) {
   const idRegions = props.idRegions;
   const dataRegions = props.dataRegions;
   const { handleClose } = props;
-  const details = dataRegions.find(
+  const details = dataRegions?.find(
     (item: any) => item.region_code == idRegions
   );
   const [formValues, setFormValues] = useState(details);

@@ -9,7 +9,7 @@ export default function EditProvinces(props: any) {
   const idProvinces = props.idProvinces;
   const dataProvinces = props.dataProvinces;
   const { handleClose } = props;
-  const details = dataProvinces.find(
+  const details = dataProvinces?.find(
     (item: any) => item.prov_id == idProvinces
   );
   const [formValues, setFormValues] = useState(details);

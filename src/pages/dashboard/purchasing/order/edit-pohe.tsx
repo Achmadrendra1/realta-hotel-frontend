@@ -10,7 +10,7 @@ export default function EditPohes(props: any) {
     const { handleClose } = props
     const dispatch = useDispatch()
 
-    const editPohes = data.find((item: any) => item.pove_id == id)
+    const editPohes = data?.find((item: any) => item.pove_id == id)
     const [dataPohe, setDataPohe] = useState(editPohes)
 
     const status = [

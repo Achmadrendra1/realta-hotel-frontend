@@ -10,7 +10,7 @@ export default function EditAddress(props: any) {
   const provNamee = props.provNamee;
   const dataCity = props.dataCity;
   const { handleClose } = props;
-  const details = dataCity.find((item: any) => item.addr_id == idCity);
+  const details = dataCity?.find((item: any) => item.addr_id == idCity);
   const [formValues, setFormValues] = useState(details);
 
   const handleInputChange = (input: any) => (e: any) => {

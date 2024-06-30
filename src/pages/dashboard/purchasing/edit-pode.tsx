@@ -10,7 +10,7 @@ export default function EditPodes(props: any) {
     const { handleClose } = props
     const dispatch = useDispatch()
 
-    const editPodes = data.find((item: any) => item.podhe_id == id)
+    const editPodes = data?.find((item: any) => item.podhe_id == id)
     const [dataPode, setDataPode] = useState(editPodes)
 
     const eventHandler = (item: any) => (event: any) => {

@@ -14,7 +14,7 @@ export default function AddProvinces(props: any) {
   const countryId = props.countryId;
   const dataProvinces = props.dataProvinces;
   const { handleClose } = props;
-  const details = dataProvinces.find(
+  const details = dataProvinces?.find(
     (item: any) => item.prov_country_id == countryId
   );
   const [formValues, setFormValues] = useState(details);
