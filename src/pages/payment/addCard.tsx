@@ -26,7 +26,7 @@ export default function AddCard(props: any) {
     usacExpyear: "",
     usacSaldo: "",
     usacSecureCode: "",
-    usacUserId: dataUser[0].user_id,
+    usacUserId: dataUser?.[0].user_id,
   });
 
   const onFinish = () => {

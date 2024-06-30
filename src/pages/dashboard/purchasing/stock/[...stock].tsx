@@ -17,7 +17,7 @@ export default function Stod() {
 
     const { stocks } = useSelector((state: any) => state.StockReducer)
     const { id_stock, name_stock } = router.query
-    const data = stocks.find((item: any) => item.stockId == id_stock)
+    const data = stocks?.find((item: any) => item.stockId == id_stock)
 
     const dataStod = stods.filter((item: any) => item.stockdet_name == name_stock)
     const dataTable = dataStod.length > 0 ? dataStod : []

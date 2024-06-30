@@ -21,7 +21,7 @@ export default function EditProfile(props: any) {
   const { handleClose } = props;
   const [form] = Form.useForm();
   const [messageApi, contextHolder] = message.useMessage();
-  const user = data.find((item: any) => item[0]?.user_id == id);
+  const user = data?.find((item: any) => item?.[0]?.user_id == id);
   
   // console.log(user);
 

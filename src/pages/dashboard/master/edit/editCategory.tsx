@@ -13,7 +13,7 @@ export default function EditCategory(props: any) {
 
   const idCategory = props.idCategory;
   const dataCategory = props.dataCategory;
-  const details = dataCategory.find((item: any) => item.cagroId == idCategory);
+  const details = dataCategory?.find((item: any) => item.cagroId == idCategory);
   const [formValues, setFormValues] = useState(details);
 
   const handleInputChange = (input: any) => (e: any) => {

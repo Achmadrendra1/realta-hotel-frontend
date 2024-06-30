@@ -13,9 +13,9 @@ export default function ActivationHpay(props: any) {
   const { handleCancell, dataUser, dataPaga } = props;
   const dispatch = useDispatch();
 
-  const pagaId = dataPaga?.filter((obj: any) => obj.pagaName === "H-Pay")[0]
+  const pagaId = dataPaga?.filter((obj: any) => obj.pagaName === "H-Pay")?.[0]
     ?.pagaEntityId;
-  const accNumber = `131${dataUser[0]?.user_phone_number}`;
+  const accNumber = `131${dataUser?.[0]?.user_phone_number}`;
 
   const [formValues, setFormValues] = useState({
     usacAccountNumber: accNumber,
@@ -25,7 +25,7 @@ export default function ActivationHpay(props: any) {
     usacExpyear: 0,
     usacSaldo: 0,
     usacSecureCode: "",
-    usacUserId: dataUser[0].user_id,
+    usacUserId: dataUser?.[0].user_id,
   });
 
   const handleChange = (index: number, event: any) => {

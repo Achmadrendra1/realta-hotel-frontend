@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 export default function ChangePassword(props: any) {
  const  dispatch = useDispatch();
  const { handleClose,data } = props;
- const id = data[0].user_id
+ const id = data?.[0].user_id
  const [password,setPassword]  = useState('');
  const [confirmPassword,setConfirmPassword] = useState('');
  const [error, setError] = useState('');

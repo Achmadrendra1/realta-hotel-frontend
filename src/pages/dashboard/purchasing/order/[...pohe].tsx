@@ -17,7 +17,7 @@ export default function Pode() {
     const [updatePode, setUpdatePode] = useState(false)
 
     const { id_pohe } = router.query
-    const data = pohes.find((item: any) => item.pove_id == id_pohe)
+    const data = pohes?.find((item: any) => item.pove_id == id_pohe)
 
     const dataPode = podes.filter((item: any) => item.podhe_pohe_number == data.pove_number)
     const dataTable = dataPode.length > 0 ? dataPode : []

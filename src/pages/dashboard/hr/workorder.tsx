@@ -59,7 +59,7 @@ const WorkDetail = () => {
     const onOpens = (item?:any) => {
         setOpen(true)
         item && setId(item.wodeId)
-        const taskName = tasks.find((item:any) => item.value == form.seta)
+        const taskName = tasks?.find((item:any) => item.value == form.seta)
         setForm({ ...form, 
             task: taskName.label,
             notes: item ? item.wodeNotes : '',

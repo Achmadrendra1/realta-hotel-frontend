@@ -9,7 +9,7 @@ export default function EditFintech(props: any) {
   const id = props.id;
   const data = props.data;
   const {handleClose} = props
-  const details = data.find((item: any) => item.pagaEntityId == id);
+  const details = data?.find((item: any) => item.pagaEntityId == id);
   const [formValues, setFormValues] = useState(details);
 
   const handleInputChange = (input: any) => (e: any) => {

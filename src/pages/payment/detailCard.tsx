@@ -9,10 +9,9 @@ export default function DetailCards(props: any) {
   const { data, dataBank, handleCancell } = props;
   function maskCardNumber(cardNumber: number) {
     // Mengambil 4 digit terakhir
-    const lastFourDigits = cardNumber.toString().slice(-4);
+    const lastFourDigits = cardNumber?.toString().slice(-4);
     // Mengganti semua digit, kecuali 4 digit terakhir, dengan karakter "*"
-    const maskedDigits = cardNumber
-      .toString()
+    const maskedDigits = cardNumber?.toString()
       .slice(0, -4)
       .replace(/\d{4}/g, (str) => `${str} `)
       .replace(/\d/g, "*");
@@ -76,7 +75,7 @@ export default function DetailCards(props: any) {
                       <img
                         className="relative object-cover w-full h-full rounded-xl"
                         src={
-                          data.usacType == "Debet"
+                          data?.usacType == "Debet"
                             ? "https://i.imgur.com/kGkSg1v.png"
                             : "https://i.imgur.com/Zi6v09P.png"
                         }
@@ -85,15 +84,15 @@ export default function DetailCards(props: any) {
                       <div className="w-full px-8 absolute top-8">
                         <div className="flex justify-between">
                           <div className="">
-                            <p className="font-semiBold text-lg">{dataBank.find((obj:any) => obj.bankEntityId == data.usacEntityId)?.bankName}</p>
+                            <p className="font-semiBold text-lg">{dataBank?.find((obj:any) => obj.bankEntityId == data?.usacEntityId)?.bankName}</p>
                           </div>
                           <p className="font-semibold text-lg">
-                            {data.usacType}
+                            {data?.usacType}
                           </p>
                         </div>
                         <div className="pt-8">
                           <p className="font-medium tracking-more-wider text-3xl">
-                            {maskCardNumber(data.usacAccountNumber)}
+                            {maskCardNumber(data?.usacAccountNumber)}
                           </p>
                         </div>
                         <div className="mt-8">
@@ -101,7 +100,7 @@ export default function DetailCards(props: any) {
                             <div className="">
                               <p className="font-light text-xs">Exp :</p>
                               <p className="font-medium tracking-wider text-sm">
-                                {`${data.usacExpmonth}/${data.usacExpyear}`}
+                                {`${data?.usacExpmonth}/${data?.usacExpyear}`}
                               </p>
                             </div>
                             <div className="min-w-[120px]">
@@ -109,7 +108,7 @@ export default function DetailCards(props: any) {
                                 Balance :
                               </p>
                               <p className="font-medium tracking-wider text-sm">
-                                {parseInt(data.usacSaldo).toLocaleString(
+                                {parseInt(data?.usacSaldo).toLocaleString(
                                   "id-ID",
                                   {
                                     style: "currency",
@@ -125,7 +124,7 @@ export default function DetailCards(props: any) {
                       </div>
                     </div>
         <div className="text-center mt-6">
-          <Buttons funcs={()=>handleDelete(data.usacAccountNumber)} type={"danger"}>
+          <Buttons funcs={()=>handleDelete(data?.usacAccountNumber)} type={"danger"}>
             DELETE CARD
           </Buttons>
         </div>

@@ -18,7 +18,7 @@ export const DeptReducer = ( state:any = initialState, action:any) => {
                 data: [...state.data, payload]
             }
         case deptType.UPDATE_DATA_SUCCESS:
-            const index = state.data.findIndex((item:any) => item.deptId == payload.deptId)
+            const index = state.data?.findIndex((item:any) => item.deptId == payload.deptId)
             state.data.splice(index, 1, payload)
             return{
                 ...state,

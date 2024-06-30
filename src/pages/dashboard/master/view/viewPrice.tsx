@@ -6,7 +6,7 @@ export default function ViewPrice(props: any) {
   const idPrice = props.idPrice;
   const dataPrice = props.dataPrice;
   const { handleClose } = props;
-  const detailsPrice = dataPrice.find((item: any) => item.pritId == idPrice);
+  const detailsPrice = dataPrice?.find((item: any) => item.pritId == idPrice);
   const [formValues, setFormValues] = useState(detailsPrice);
 
   const onFinish = () => {

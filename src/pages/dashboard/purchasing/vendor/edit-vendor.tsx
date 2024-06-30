@@ -10,7 +10,7 @@ export default function EditVendors(props: any) {
     const { handleClose } = props
     const dispatch = useDispatch()
 
-    const editVendors = data.find((item: any) => item.vendorId == id)
+    const editVendors = data?.find((item: any) => item.vendorId == id)
     const [dataVendor, setDataVendor] = useState(editVendors)
 
     const active = [
@@ -64,7 +64,7 @@ export default function EditVendors(props: any) {
                     initialValues={dataVendor}
                 >
                     <p className='text-center text-xl py-5 font-bold'>
-                        Edit Vendor {editVendors.vendorName}
+                        Edit Vendor {editVendors?.vendorName}
                     </p>
 
                     <Form.Item

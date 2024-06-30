@@ -9,7 +9,7 @@ export default function EditBank(props: any) {
   const id = props.id;
   const data = props.data;
   const {handleClose} = props
-  const details = data.find((item: any) => item.bankEntityId == id);
+  const details = data?.find((item: any) => item.bankEntityId == id);
   const [formValues, setFormValues] = useState(details);
 
   const handleInputChange = (input: any) => (e: any) => {

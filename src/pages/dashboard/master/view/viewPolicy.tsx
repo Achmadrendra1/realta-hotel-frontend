@@ -6,7 +6,7 @@ export default function ViewPolicy(props: any) {
   const idPolicy = props.idPolicy;
   const dataPolicy = props.dataPolicy;
   const { handleClose } = props;
-  const detailsPoli = dataPolicy.find((item: any) => item.poliId == idPolicy);
+  const detailsPoli = dataPolicy?.find((item: any) => item.poliId == idPolicy);
   const [formValues, setFormValues] = useState(detailsPoli);
   
   const onFinish = () => {

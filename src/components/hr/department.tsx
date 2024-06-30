@@ -51,7 +51,7 @@ const Department = () => {
     const onOpens = (id?:any) => {
         setOpen(true)
         id && setId(id)
-        const details = id ? data.find((item:any) => item.deptId == id) : ''
+        const details = id ? data?.find((item:any) => item.deptId == id) : ''
         setForm(id ? details?.deptName : details)
         setTitle(id ? 'Edit' : 'Add')
     }

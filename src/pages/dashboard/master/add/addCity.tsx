@@ -14,7 +14,7 @@ export default function AddProvinces(props: any) {
   const provId = props.provId;
   const dataProvinces = props.dataProvinces;
   const { handleClose } = props;
-  const details = dataProvinces.find(
+  const details = dataProvinces?.find(
     (item: any) => item.prov_name == provNamee
   );
 

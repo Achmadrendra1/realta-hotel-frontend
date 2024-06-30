@@ -23,7 +23,7 @@ export const employeesReducer = (state:any = initialState, action:any) => {
                 employees: payload
             }
         case empType.UPDATE_DATA_SUCCES:
-            const index = state.employees.findIndex((item:any) => item.id == payload.id)
+            const index = state.employees?.findIndex((item:any) => item.id == payload.id)
             state.employees.splice(index, 1, payload);
             return{
                 ...state,

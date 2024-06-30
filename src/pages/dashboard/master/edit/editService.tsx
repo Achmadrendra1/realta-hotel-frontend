@@ -9,7 +9,7 @@ export default function EditService(props: any) {
   const idService = props.idService;
   const dataService = props.dataService;
   const { handleClose } = props;
-  const details = dataService.find((item: any) => item.setaId == idService);
+  const details = dataService?.find((item: any) => item.setaId == idService);
   const [formValues, setFormValues] = useState(details);
 
   const handleInputChange = (input: any) => (e: any) => {

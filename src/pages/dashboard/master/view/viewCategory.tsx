@@ -6,7 +6,7 @@ export default function ViewCategory(props: any) {
   const idCategory = props.idCategory;
   const dataCategory = props.dataCategory;
   const { handleClose } = props;
-  const detailscate = dataCategory.find(
+  const detailscate = dataCategory?.find(
     (item: any) => item.cagroId == idCategory
   );
   const [formValues, setFormValues] = useState(detailscate);
